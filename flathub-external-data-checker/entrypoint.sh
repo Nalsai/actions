@@ -23,14 +23,6 @@ manifest["https://github.com/Nalsai/summarizer"]="de.haigruppe.summarizer.json"
 for m in "${!manifest[@]}"; do
     git clone --depth 1 $m
     printf "==> checking %s in %s\n" "${manifest[$m]}" "$m"
-    /app/flatpak-external-data-checker --verbose --update $m/$manifest[$m]
+    /app/flatpak-external-data-checker --verbose --update $m/${manifest[$m]}
 done
 
-
-
-
-
-
-for repo in ${checker_apps[@]}; do
-    manifest=$(detect_manifest $repo)
-done
