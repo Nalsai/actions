@@ -11,8 +11,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.NALSAIBOT_TOKEN }}
     - uses: gautamkrishnar/keepalive-workflow@master
-      env:
-        GH_TOKEN: ${{ secrets.NALSAIBOT_TOKEN }}
-        COMMIT_MESSAGE: Keep the repository active (automated keepalive workflow)
-        COMMITTER_USERNAME: NalsaiBot
-        COMMITTER_EMAIL: bot@nalsai.de
+      with:
+        gh_token: ${{ secrets.NALSAIBOT_TOKEN }}
+        commit_message: Keep the repository active (automated keepalive workflow)
+        committer_username: NalsaiBot
+        committer_email: bot@nalsai.de
