@@ -10,6 +10,7 @@ jobs:
     - uses: nalsai/actions/flathub-external-data-checker@main
       env:
         GITHUB_TOKEN: ${{ secrets.NALSAIBOT_TOKEN }}
+    - uses: actions/checkout@v2
     - uses: gautamkrishnar/keepalive-workflow@master
       with:
         gh_token: ${{ secrets.NALSAIBOT_TOKEN }}
